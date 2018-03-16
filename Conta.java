@@ -12,4 +12,13 @@ class Conta {
     void deposita(double quantidade) {
         this.saldo += quantidade;
     }
+
+    boolean saca(double valor) {
+        if (this.saldo < valor) {
+            return false;
+        }else{
+            this.saldo = this.saldo - valor;
+            return true;
+        }
+    }
 }
